@@ -1,1 +1,3 @@
 architectures/__pycache__/
+*.pth
+data/
