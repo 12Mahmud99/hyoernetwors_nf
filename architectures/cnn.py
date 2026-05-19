@@ -74,7 +74,6 @@ class ConvNet(nn.Module):
                 print(f"Model saved to {out_path} (no validation).")
 
     def evaluate(self, dataloader, criterion=None, device='cpu'):
-        """Evaluate the model on a DataLoader (e.g., test set)."""
         if criterion is None:
             criterion = nn.CrossEntropyLoss()
         self.eval()
