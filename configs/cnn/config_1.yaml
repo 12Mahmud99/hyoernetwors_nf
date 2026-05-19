@@ -1,0 +1,4 @@
+epochs: 300
+lr: 0.001
+val_every: 50 
+patience: 100
