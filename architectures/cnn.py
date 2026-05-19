@@ -23,7 +23,7 @@ class ConvNet(nn.Module):
         x = self.fc3(x)
         return x
     
-    def train(self, train_loader, val_loader=None, epochs=10, lr=0.001,
+    def fit(self, train_loader, val_loader=None, epochs=10, lr=0.001,
             device='cpu', val_every=1, patience=5, out_path="best_model.pth"):
         self.to(device)
         criterion = nn.CrossEntropyLoss()
