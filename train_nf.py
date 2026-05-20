@@ -20,16 +20,16 @@ if __name__ == '__main__':
 
     model = cnn.ConvNet()
 
-    out_path = args.output if args.output else config.get("out_path", "best_model.pth")
+    out_path = args.output if args.output else config.get("out_path", "checkpoints/best_model.pth")
 
     model.fit(
         train_loader=trainloader,
         val_loader=valloader,
-        epochs=config.get("epochs", 10),
-        lr=config.get("lr", 0.001),
+        epochs=config["epochs"],
+        lr=config["lr"],
         device=device,
-        val_every=config.get("val_every", 5),
-        patience=config.get("patience", 5),
+        val_every=config["val_every"],
+        patience=config["patience"],
         out_path=out_path
     )
 
