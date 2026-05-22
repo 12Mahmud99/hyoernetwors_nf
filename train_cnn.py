@@ -21,6 +21,7 @@ if __name__ == '__main__':
     model = cnn.ConvNet()
 
     out_path = args.output if args.output else config.get("out_path", "checkpoints/best_model.pth")
+    print(out_path)
 
     model.fit(
         train_loader=trainloader,
@@ -32,5 +33,3 @@ if __name__ == '__main__':
         patience=config["patience"],
         out_path=out_path
     )
-
-    print(f"Training completed. Best model saved to {out_path}")
