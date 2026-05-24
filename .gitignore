@@ -3,3 +3,4 @@ architectures/__pycache__/
 data/
 checkpoints/
 *.npz
+trajectories/
