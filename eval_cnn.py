@@ -7,7 +7,7 @@ import json
 if __name__ == '__main__':    
     parser = argparse.ArgumentParser(description='Evaluate a trained CNN on CIFAR-10')
     parser.add_argument("--config", "-c", type=str, required=True)
-    parser.add_argument("--ckpt", "--checkpoint", "--model", type=str, required=True) 
+    parser.add_argument("--ckpt", "--checkpoint", "--model", "-m", type=str, required=True) 
     parser.add_argument("--output", "-o", type=str)
     parser.add_argument("--device", "-d", type=str, default="cuda")
     args = parser.parse_args()
